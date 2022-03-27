@@ -18,8 +18,12 @@ import {
 } from "expo-image-picker";
 import { Colors } from "constants/colors";
 
+import OutlinedButton from "components/ui/OutlinedButton";
+
 const ImagePicker: React.FC = () => {
-	const [pickedImage, setPickedImage] = useState<ImagePickerResult>(null);
+	const [pickedImage, setPickedImage] = useState<ImagePickerResult | null>(
+		null
+	);
 
 	const [cameraPermissionInfomation, requestPermission] =
 		useCameraPermissions();
@@ -67,7 +71,9 @@ const ImagePicker: React.FC = () => {
 					<Text>No image taken yet.</Text>
 				)}
 			</View>
-			<Button title="Take Image" onPress={takeImageHandler} />
+			<OutlinedButton icon="camera" onPress={takeImageHandler}>
+				Take image
+			</OutlinedButton>
 		</View>
 	);
 };
@@ -91,8 +97,8 @@ const styles = StyleSheet.create<Styles>({
 	},
 
 	image: {
-    width: "100%",
-    height: "100%",
-    borderRadius: 4,
-  },
+		width: "100%",
+		height: "100%",
+		borderRadius: 4,
+	},
 });
