@@ -86,7 +86,7 @@ const styles = StyleSheet.create<Styles>({
 	imagePreview: {
 		width: "100%",
 		height: 200,
-		marginBottom: 8,
+		marginVertical: 8,
 		justifyContent: "center",
 		alignItems: "center",
 		backgroundColor: Colors.primary100,
