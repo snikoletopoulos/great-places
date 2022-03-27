@@ -6,12 +6,12 @@ import {
 	getCurrentPositionAsync,
 	useForegroundPermissions,
 	PermissionStatus,
-  LocationObject,
+	LocationObject,
 } from "expo-location";
 
 import OutlinedButton from "components/ui/OutlinedButton";
 
-const LocationPicker: React.FC = props => {
+const LocationPicker: React.FC = () => {
 	const [location, setLocation] = useState<LocationObject>();
 
 	const [locationPermissionInformation, requestPermission] =
@@ -45,12 +45,10 @@ const LocationPicker: React.FC = props => {
 		}
 
 		const location = await getCurrentPositionAsync();
-    setLocation(location);
+		setLocation(location);
 	};
 
-	const handlePickOnMap = () => {
-
-  };
+	const handlePickOnMap = () => {};
 
 	return (
 		<View>

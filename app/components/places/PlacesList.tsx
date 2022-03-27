@@ -31,7 +31,9 @@ const PlacesList: React.FC<Props> = props => {
 		<FlatList
 			keyExtractor={place => place.id}
 			data={props.places}
-			renderItem={itemData => <PlaceItem place={itemData.item} />}
+			renderItem={itemData => (
+				<PlaceItem place={itemData.item} onSelect={() => {}} />
+			)}
 		/>
 	);
 };
