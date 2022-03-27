@@ -10,6 +10,7 @@ import {
 import Place from "models/Place";
 
 import PlaceItem from "components/places/PlaceItem";
+import { Colors } from "constants/colors";
 
 interface Props {
 	places: Place[];
@@ -51,5 +52,6 @@ const styles = StyleSheet.create<Styles>({
 
 	fallbackText: {
 		fontSize: 16,
+		color: Colors.primary200,
 	},
 });
