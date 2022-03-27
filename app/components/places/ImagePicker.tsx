@@ -2,7 +2,6 @@ import { useState } from "react";
 import {
 	StyleSheet,
 	Alert,
-	Button,
 	View,
 	Text,
 	Image,
@@ -21,9 +20,7 @@ import { Colors } from "constants/colors";
 import OutlinedButton from "components/ui/OutlinedButton";
 
 const ImagePicker: React.FC = () => {
-	const [pickedImage, setPickedImage] = useState<ImagePickerResult | null>(
-		null
-	);
+	const [pickedImage, setPickedImage] = useState<ImagePickerResult>();
 
 	const [cameraPermissionInfomation, requestPermission] =
 		useCameraPermissions();
