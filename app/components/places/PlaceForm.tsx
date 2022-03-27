@@ -9,10 +9,9 @@ import {
 	View,
 	ViewStyle,
 } from "react-native";
+import ImagePicker from "components/places/ImagePicker";
 
-interface Props {}
-
-const PlaceForm: React.FC<Props> = props => {
+const PlaceForm: React.FC = () => {
 	const [title, setTitle] = useState("");
 
 	return (
@@ -21,6 +20,7 @@ const PlaceForm: React.FC<Props> = props => {
 				<Text style={styles.label}>Title</Text>
 				<TextInput style={styles.input} value={title} onChangeText={setTitle} />
 			</View>
+			<ImagePicker />
 		</ScrollView>
 	);
 };
