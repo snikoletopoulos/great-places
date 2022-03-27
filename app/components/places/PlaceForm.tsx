@@ -9,7 +9,9 @@ import {
 	View,
 	ViewStyle,
 } from "react-native";
+
 import ImagePicker from "components/places/ImagePicker";
+import LocationPicker from "components/places/LocationPicker";
 
 const PlaceForm: React.FC = () => {
 	const [title, setTitle] = useState("");
@@ -21,6 +23,7 @@ const PlaceForm: React.FC = () => {
 				<TextInput style={styles.input} value={title} onChangeText={setTitle} />
 			</View>
 			<ImagePicker />
+			<LocationPicker />
 		</ScrollView>
 	);
 };
